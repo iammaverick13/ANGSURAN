@@ -34,11 +34,15 @@
 							<a href="{% url 'update' %}"><button class="login100-form-btn">update pelanggan</button></a>
 						</div>
 					</div>
+					<div class="wrap-login100-form-btn">
+						<div class="login100-form-bgbtn"></div>
+							<a href="{% url 'logout' %}"><button class="login100-form-btn">keluar</button></a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<a href="{% url 'logout' %}">logout</a>
 	
 	<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
 	<script src="{% static 'vendor/animsition/js/animsition.min.js">' </script>
@@ -51,4 +55,5 @@
 	<script src="{% static 'js/main.js' %}"></script>
 	
 {% endblock content %}
+
 

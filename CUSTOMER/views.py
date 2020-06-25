@@ -52,7 +52,7 @@ def addCustomer(request):
 		if form.is_valid():
 			username = form.cleaned_data['username']
 			jumlah_utang = form.cleaned_data['jumlah_utang']
-			add_customer = Customer(username=username, jumlah_utang=jumlah_utang)
+			add_customer = Customer.objects.create_user(username=username, jumlah_utang=jumlah_utang)
 			add_customer.save()
 			return redirect('/accounts/dashboard')
 
@@ -62,6 +62,7 @@ def addCustomer(request):
 	}
 
 	return render(request, 'customer/add.html', context)
+
 @login_required
 def updateCustomer(request):
 	return redirect('/accounts/dashboard')
