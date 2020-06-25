@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{pageTitle}}</title>
+	<link rel="stylesheet" type="text/css" href="{%  static 'bootstrap/bootstrap.css' %}">
+	{% block style %}{% endblock style %}
+</head>
+<body>
+
+	{% block content %}
+
+
+
+	<script type="text/javascript" src="{%  static 'bootstrap/bootstrap.js' %}"></script>
+
+	{% endblock content %}
+
+</body>
+</html>

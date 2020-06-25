@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/customer/list_customer.css' %}">
+{% endblock style %}
+
+{% block content %}
+	
+	<div class="card-parent">
+	{% for i in list_customer %}
+			<div class="card">
+				<img src="{% static 'img/profile.png' %}" class="profile">
+				<a href="{% url 'customer' i.id %}"><h3>{{i.username}}<br>{{i.jumlah_utang}}</h3><br></a>
+			</div>
+	{% endfor %}
+	</div>
+
+	<a href="{% url 'home' %}">kembali</a>
+
+{% endblock content %}
